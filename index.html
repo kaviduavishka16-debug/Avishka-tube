@@ -1,26 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -161,21 +140,11 @@
         <h1 class="logo-text">AVISHKA TUBE</h1>
     </div>
 
-    <div class="search-container">
-        <form onsubmit="googleSearch(event)">
-            <input type="text" id="searchInput" class="search-box" placeholder="Google Search...">
-            <button type="submit" class="search-btn">Go</button>
-        </form>
-    </div>
+<div class="search-container">
+    <script async src="https://cse.google.com/cse.js?cx=a7d7938fa2b384bf4"></script>
+    <div class="gcse-search"></div>
+</div>
 
-    <div class="ad-banner">
-        <span>Google Ad Banner Space 1</span>
-    </div>
-
-    <h2 class="gallery-title">Latest Updates</h2>
-    
-    <div class="content-grid">
-        
         <div class="card">
             <img src="https://via.placeholder.com/350x200" alt="Sample Photo">
             <div class="card-desc">මේක ෆොටෝ එකක් දාන තැනක්</div>
@@ -196,21 +165,4 @@
     <div class="ad-banner">
         <span>Google Ad Banner Space 2</span>
     </div>
-
-    <script>
-        function googleSearch(event) {
-            event.preventDefault(); // පිටුව රීලෝඩ් වෙන එක නවත්තනවා
-            var query = document.getElementById("searchInput").value;
-            if (query) {
-                // Google එකට ගිහින් සර්ච් කරනවා
-                window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
-            }
-        }
-    </script>
-
-</body>
-</html>
-
-
-
 
