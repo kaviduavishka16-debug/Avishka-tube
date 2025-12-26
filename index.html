@@ -1,56 +1,216 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Avishka's AI Tool Hub - Find the best free AI tools for 2025.">
-<meta name="keywords" content="Best AI tools, Free AI, 2025 Tech, Avishka AI">    <title>Avishka Tube - AI Revolution</title>
+    <title>Avishka Tube</title>
     <style>
-        body { background-color: #0f0f0f; color: white; font-family: Roboto, Arial, sans-serif; margin: 0; padding: 0; }
-        
-        /* උඩ තියෙන Search Bar එක (Header) */
-        header { background-color: #0f0f0f; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .logo { color: #ff0000; font-size: 24px; font-weight: bold; text-decoration: none; }
-        .search-bar { background: #121212; border: 1px solid #303030; padding: 8px 15px; border-radius: 20px; width: 40%; color: white; }
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-        /* වීඩියෝ පෙන්වන ප්‍රධාන කොටස */
-        .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        /* 1. Intro Animation (ලොකුවට ඇවිත් පොඩි වෙලා කොනට යන එක) */
+        .logo-container {
+            position: fixed;
+            animation: logoMove 3s forwards;
+            z-index: 1000;
+            width: 100%;
+            text-align: center;
+        }
         
-        /* වීඩියෝ කාඩ් එකක් */
-        .video-card { background: none; border-radius: 12px; overflow: hidden; cursor: pointer; transition: 0.3s; }
-        .thumbnail { width: 100%; height: 180px; background: #2a2a2a; border-radius: 12px; object-fit: cover; }
-        .video-info { padding: 10px 5px; }
-        .video-title { font-size: 16px; font-weight: bold; margin: 5px 0; display: block; }
-        .video-stats { font-size: 14px; color: #aaaaaa; }
+        .logo-text {
+            color: #ff0000;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px red;
+        }
 
-        /* Ads පෙන්වන බැනර් එකක් (Profit එකට) */
-        .ad-banner { background: linear-gradient(90deg, #1e3a8a, #3b82f6); padding: 15px; margin: 20px; border-radius: 10px; text-align: center; font-weight: bold; }
+        @keyframes logoMove {
+            0% {
+                top: 50%;
+                font-size: 60px;
+                transform: translateY(-50%);
+            }
+            40% {
+                top: 50%;
+                font-size: 60px;
+                transform: translateY(-50%);
+            }
+            100% {
+                top: 10px;
+                left: 10px;
+                font-size: 24px;
+                transform: translateY(0);
+                text-align: left;
+                padding-left: 15px;
+            }
+        }
+
+        /* 3. Search Bar (Google Search) */
+        .search-container {
+            margin-top: 100px; /* ලෝගෝ එකට ඉඩ දෙන්න */
+            padding: 20px;
+        }
+
+        .search-box {
+            padding: 12px;
+            width: 70%;
+            border-radius: 25px;
+            border: 2px solid #ff0000;
+            background: #222;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-btn {
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            background: #ff0000;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        /* 4. Ad Banners */
+        .ad-banner {
+            width: 90%;
+            height: 100px;
+            background-color: #333;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            border: 1px dashed #555;
+            border-radius: 10px;
+        }
+
+        /* 2. Photo & Video Gallery */
+        .gallery-title {
+            color: #ff0000;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 350px; /* ෆෝන් එකට ගැලපෙන්න */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .card img, .card video, .card iframe {
+            width: 100%;
+            display: block;
+        }
+        
+        .card-desc {
+            padding: 10px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
     </style>
 </head>
-<div class="container">
-        <div class="video-card">
-            <iframe width="100%" height="200" 
-                src="https://www.youtube.com/embed/tgbNymZ7vqY" 
-                frameborder="0" 
-                allowfullscreen 
-                style="border-radius: 12px;">
-            </iframe>
-            <div class="video-info">
-                <span class="video-title">How AI is Changing the World in 2025</span>
-                <span class="video-stats">Avishka Tech • 1.2M views</span>
-            </div>
-        </div>
+<body>
+
+    <div class="logo-container">
+        <h1 class="logo-text">AVISHKA TUBE</h1>
     </div>
+
+    <div class="search-container">
+        <form onsubmit="googleSearch(event)">
+            <input type="text" id="searchInput" class="search-box" placeholder="Google Search...">
+            <button type="submit" class="search-btn">Go</button>
+        </form>
+    </div>
+
+    <div class="ad-banner">
+        <span>Google Ad Banner Space 1</span>
+    </div>
+
+    <h2 class="gallery-title">Latest Updates</h2>
+    
+    <div class="content-grid">
+        
+        <div class="card">
+            <img src="https://via.placeholder.com/350x200" alt="Sample Photo">
+            <div class="card-desc">මේක ෆොටෝ එකක් දාන තැනක්</div>
+        </div>
+
+        <div class="card">
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+                        src="https://www.youtube.com/embed/jfKfPfyJRdk?modestbranding=1&rel=0&controls=1" 
+                        frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-desc">මේක YouTube වීඩියෝ එකක්</div>
+        </div>
+
+    </div>
+
+    <div class="ad-banner">
+        <span>Google Ad Banner Space 2</span>
+    </div>
+
+    <script>
+        function googleSearch(event) {
+            event.preventDefault(); // පිටුව රීලෝඩ් වෙන එක නවත්තනවා
+            var query = document.getElementById("searchInput").value;
+            if (query) {
+                // Google එකට ගිහින් සර්ච් කරනවා
+                window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+            }
+        }
+    </script>
+
 </body>
-</html><body>
+</html>
 
-<header>
-    <a href="#" class="logo">AvishkaTube</a>
-    <input type="text" class="search-bar" placeholder="Search AI videos...">
-    <div style="width: 40px; height: 40px; background: #3b82f6; border-radius: 50%;"></div>
-</header>
 
-<div class="ad-banner">
-    🚀 Special Offer: Get the Best AI Course for 50% Off! (Your Ad Here)
-</div>
+
 
